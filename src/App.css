@@ -1,38 +1,276 @@
+:root {
+  --main-dark-color: #1e000e;
+  --second-dark-color: #823038;
+  --lt-color: #deba6f;
+  --second-lt-color: #e5f77d;
+  --ter-lt-color: rgb(63, 200, 63);
+}
+
 .App {
-  text-align: center;
+  box-sizing: border-box;
+  letter-spacing: .5em;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: 
+    url(./images/mountains.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  z-index: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* header styling ------------------------------------------------------------------------*/
+
+.header { 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--main-dark-color);
+  color: white;
+  padding: .55em 0;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+/* left side of header ------------*/
+
+#logo {
+  position: absolute;
+  top: 1vh;
+  margin-left: 3em;
+  border-radius: 50%;
+  max-height: 23vh;
+  width: auto;
+  z-index: 10;
+}
+
+@media (max-width: 1250px) {
+  #logo {
+    height: 7em;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* right side of header ------------*/
+
+.right-side {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5em;
+  width: 50%;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon:hover {
+  background-color: #60292f;
+}
+
+@media (max-width: 1250px) {
+  .right-side {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+    padding: 0 1em;
+    margin: 0 1em;
+    border-radius: 3px;
+  }
+}
+
+.right-container {
+  display: flex;
+  padding: 1.5em 0;
+  width: 50%;
+  height: 100%;
+}
+
+.link-list {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+}
+
+.link-tag {
+  color: white;
+  margin: 0 1em;
+  cursor: pointer;
+}
+
+.utility-container {
+  display: flex;
+  max-width: 20vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopping-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 20em;
+}
+
+.shopping-cart {
+  display: flex;
+  align-items: center;
+}
+
+.product-count {
+  background-color: rgb(153, 223, 153);
+  border-radius: 100%;
+  padding-left: 5.5px;
+  color: black;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.log-in-btn {
+  width: 12em;
+  color: rgb(63, 200, 63);
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a#sign-in {
+  width: 8em;  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-link {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
 }
+
+.log-in-btn:hover,
+#sign-in:hover,
+.link-tag:hover {
+  color: rgb(5, 245, 5);
+}
+
+.success {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+/* Sign In page ------------------------------------------------------------------------*/
+
+.page {
+  background-image: 
+    linear-gradient(black, rgba(0, 0, 0, 0.495)),
+    url(./images/mountains.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+}
+
+.page .card {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  margin-top: 5em;
+  padding: 1em;
+  border-radius: 1em;
+  border: 2px solid white;
+}
+
+.card a {
+  color: white;
+  border: 1px solid white;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+.sign-in { 
+  height: 10em;
+}
+
+#sign-in {
+  width: 10em;
+}
+
+li {
+  list-style: none;
+}
+
+/* shopping pages */
+
+.shop-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-display {
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr) ) ;
+}
+
+.links {
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 3px 12px;
+  border-radius: 5px;
+}
+
+.links:hover {
+  background-color: rgba(204, 196, 196, 0.314);
+}
+
+/* mobile menu page----------------------------- */
+
+.menu-page {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.menu-link {
+  border: 1px solid white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+  font-size: 20px;
+}
+
+.menu-link:hover {
+  background-color: rgb(41, 39, 39);
+}
+
+
