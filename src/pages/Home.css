@@ -1,0 +1,81 @@
+:root {
+  --main-dark-color: #1e000e;
+  --second-dark-color: #823038;
+  --lt-color: #deba6f;
+  --second-lt-color: #e5f77d;
+  --ter-lt-color: #f4f7be;
+}
+
+
+.home-page {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: auto;
+  padding: 0 4em;
+  margin-top: 3em;
+}
+
+.banner {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2.5em;
+}
+
+#coffee-beans {
+  margin-left: 3em;
+  max-height: 30em;
+  width: auto;
+  border-radius: 50%;
+  opacity: 80%;
+  box-shadow: 2px 4px 20px 5px rgba(0, 0, 0, 0.709);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1500px;
+  min-height: 69vh;
+}
+
+@media (max-width: 1250px) {
+ .display {
+  flex-direction: column;
+ } 
+ #coffee-beans {
+  margin: 0;
+ }
+}
+
+.text-card {
+  background-color: rgba(255, 255, 255, 0.793);
+  padding: 0 1em;
+  border-radius: 1em;
+  text-align: end;
+  line-height: 2em;
+  margin: 1em;
+  max-width: 1000px;
+}
+
+#social {
+  position: relative;
+  background-color: green;
+  text-decoration: none;
+  color: white;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+#social:hover {
+  background-color: rgba(139, 139, 139, 0.55);
+  color: green;
+  border: 1px solid green;
+}
