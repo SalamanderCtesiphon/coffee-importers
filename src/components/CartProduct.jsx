@@ -20,7 +20,7 @@ function CartProduct(props) {
       <div className='check-out-card'>
         <img src={productData.image} alt="product" className='check-out-image'></img>
         <div className='cc-sub-section'>
-          <div>Product Name:</div>
+          <div className='check-out-title'>Product Name:</div>
           <h3>{productData.title}</h3>
         </div>
         <div className='cc-sub-section-two'>
