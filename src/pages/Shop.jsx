@@ -2,6 +2,8 @@ import React from 'react'
 import { productsArray } from '../utility/inventory'
 import ProductCard from '../components/ProductCard'
 import './Shop.css'
+import Icon from '@mdi/react'
+import { mdiArrowRightBold } from '@mdi/js'
 
 
 function Shop() {
@@ -19,6 +21,8 @@ function Shop() {
           </div>
         ))}
       </div>
+      <h3 className='btn-box'><a id='shop-button' href='/checkout'>Check Out<Icon path={mdiArrowRightBold} size={1} /></a></h3>
+       
     </div>
   )
 }
