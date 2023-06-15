@@ -1,6 +1,8 @@
 import React from 'react'
 import './Home.css'
 import beans from '../images/coffee-beans.jpg'
+import Icon from '@mdi/react'
+import { mdiArrowRightBold } from '@mdi/js'
 
 function Home() {
   return (
@@ -12,8 +14,12 @@ function Home() {
           <h3>Thank you for taking the time to visit us here at Coffee Importers. We pride ourselves on bringing our clients the absolute premium coffee beans from around the globe.</h3>
           <br />
           <h3>Our buyers meticulously search farmer's markets in the world's coffee growing regions to bring you the highest quality free-trade fair-practice coffee in existence.</h3>
+
+        <h3 className='btn-box'><a id='shop-button' href='/shop'>To Shop<Icon path={mdiArrowRightBold} size={1} /></a></h3>
         </div>
+        
         </div>
+          
     </div>
   )
 }
