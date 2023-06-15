@@ -1,4 +1,6 @@
 import React from 'react'
+import Icon from '@mdi/react'
+import { mdiArrowLeftBold } from '@mdi/js'
 
 function Contact() {
   
@@ -9,7 +11,8 @@ function Contact() {
     <br />
     <p className='text-card'>Now, if your are a recruiter or a human resources manager please do contact me here:</p>
     <a href='https://www.linkedin.com/in/shannon-brookshire-817577265/' id='social'> @Linked In </a>
-   
+    <h3 className='dlt-btn '><a className='rtn-btn' id="link-back" href='/shop'><Icon path={mdiArrowLeftBold} size={1} />Return to shopping</a></h3>
+          
     </div>
   )
 }
